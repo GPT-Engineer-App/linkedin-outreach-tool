@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Checkbox, Flex, Input, Text, Textarea, VStack } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Flex, Input, Text, Textarea, VStack, useBreakpointValue } from '@chakra-ui/react';
 import { FaSearch, FaPaperPlane } from 'react-icons/fa';
 
 const Index = () => {
@@ -36,7 +36,7 @@ const Index = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box p={useBreakpointValue({ base: 4, md: 8, lg: 16 })}>
       <VStack spacing={4}>
         <Flex>
           <Input
